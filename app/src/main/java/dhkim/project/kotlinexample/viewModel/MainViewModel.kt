@@ -6,9 +6,7 @@ import androidx.lifecycle.ViewModel
 import dhkim.project.kotlinexample.model.CalModel
 
 class MainViewModel : ViewModel() {
-    private val _calModel = MutableLiveData<CalModel>().apply {
-        value = CalModel(0)
-    }
+    private val _calModel = MutableLiveData(CalModel(0))
 
     val calModel: LiveData<CalModel>
         get() = _calModel
